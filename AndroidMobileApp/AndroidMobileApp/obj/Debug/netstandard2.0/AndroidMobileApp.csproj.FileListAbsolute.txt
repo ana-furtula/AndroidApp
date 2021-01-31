@@ -21,3 +21,4 @@ C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\n
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\netstandard2.0\Views\MasterDetailLPage.xaml.g.cs
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\netstandard2.0\Views\SelfExaminationTestPage.xaml.g.cs
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\netstandard2.0\Views\TestsPage.xaml.g.cs
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\netstandard2.0\Views\QuickTestPage.xaml.g.cs

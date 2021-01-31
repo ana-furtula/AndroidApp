@@ -76,7 +76,7 @@ namespace AndroidMobileApp.ViewModels
             {
                 test.GeneralWeakness = false;
             }
-            test.IssueDate = new DateTime();
+            test.IssueDate = DateTime.Now;
             test.UserID = LoginManager.Instance.LoggedUser.ID;
             if (brojac >= 2) { test.Result = TestResult.Positive; }
             else { test.Result = TestResult.Negative; }

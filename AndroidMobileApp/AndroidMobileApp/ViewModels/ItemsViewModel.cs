@@ -20,7 +20,7 @@ namespace AndroidMobileApp.ViewModels
 
         private void QuickTestClicked(object obj)
         {
-            MasterDetailLPage.Instance.SetDetailPage(new AboutPage());
+            MasterDetailLPage.Instance.SetDetailPage(new QuickTestPage());
         }
         private void SETestClicked(object obj)
         {

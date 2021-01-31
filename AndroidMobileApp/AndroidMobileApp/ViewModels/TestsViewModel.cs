@@ -12,11 +12,16 @@ namespace AndroidMobileApp.ViewModels
         {
             SelfExaminationTests = new ObservableCollection<SelfExaminationTest>();
             List<SelfExaminationTest> tests = LoginManager.Instance.LoggedUser.SelfExaminationTests;
-            foreach(SelfExaminationTest test in tests)
+            SelfExaminationTests.Add(new SelfExaminationTest()
+            {
+                Name = "Self-examination test"
+            });
+            foreach (SelfExaminationTest test in tests)
             {
                 SelfExaminationTests.Add(new SelfExaminationTest()
                 {
-                    Result = test.Result
+                    Result = test.Result,
+                    IssueDate = test.IssueDate
                 });
             }
         }

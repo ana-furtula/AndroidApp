@@ -11,6 +11,7 @@ namespace AndroidMobileApp.Services
     }
     public class SelfExaminationTest
     {
+        public string Name { get; set; } = "Self-examination test";
         public Guid UserID { get; set; }
         public DateTime IssueDate { get; set; }
         public bool BeingInContactWithInfected { get; set; }
