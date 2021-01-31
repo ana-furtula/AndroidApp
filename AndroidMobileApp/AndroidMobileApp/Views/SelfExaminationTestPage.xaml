@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidMobileApp.Views.SelfExaminationTestPage"
+             BackgroundColor="#DCDCDC"
+             Title="Self-examination test">
+    <ContentPage.Content>
+        <StackLayout Padding="15,5,15,5">
+            <StackLayout Padding="30,30,30,0">
+                <Label Text="Have you been in contact with infected people?" FontSize="Medium" FontAttributes="Bold" TextColor="#1E90FF"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" >
+                        <RadioButton Text="Yes" GroupName="contact" IsChecked="{Binding Path=FirstYes}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
+                        <Label Text="yes" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2" >
+                        <RadioButton Text="No" GroupName="contact" IsChecked="{Binding Path=FirstNo}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="3" >
+                        <Label Text="no" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                </Grid>
+            </StackLayout>
+            <StackLayout Padding="30,30,30,0">
+                <Label Text="Have you lost your sense of smell or taste?" FontSize="Medium" FontAttributes="Bold" TextColor="#1E90FF"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" >
+                        <RadioButton Text="Yes" GroupName="senses" IsChecked="{Binding Path=SecondYes}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
+                        <Label Text="yes" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2" >
+                        <RadioButton Text="No" GroupName="senses" IsChecked="{Binding Path=SecondNo}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="3" >
+                        <Label Text="no" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Padding="30,30,30,0">
+                <Label Text="Do you have a fever?" FontSize="Medium" FontAttributes="Bold" TextColor="#1E90FF"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" >
+                        <RadioButton Text="Yes" GroupName="fever" IsChecked="{Binding Path=ThirdYes}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
+                        <Label Text="yes" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2" >
+                        <RadioButton Text="No" GroupName="fever" IsChecked="{Binding Path=ThirdNo}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="3" >
+                        <Label Text="no" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Padding="30,30,30,0">
+                <Label Text="Do you cough?" FontSize="Medium" FontAttributes="Bold" TextColor="#1E90FF"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" >
+                        <RadioButton Text="Yes" GroupName="cough" IsChecked="{Binding Path=FourthYes}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
+                        <Label Text="yes" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2" >
+                        <RadioButton Text="No" GroupName="cough" IsChecked="{Binding Path=FourthYes}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="3" >
+                        <Label Text="no" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Padding="30,30,30,0">
+                <Label Text="Do you have general weakness?" FontSize="Medium" FontAttributes="Bold" TextColor="#1E90FF"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" >
+                        <RadioButton Text="Yes" GroupName="weakness" IsChecked="{Binding Path=FifthYes}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="1" HorizontalOptions="Start">
+                        <Label Text="yes" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2" >
+                        <RadioButton Text="No" GroupName="weakness" IsChecked="{Binding Path=FifthNo}"/>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="3" >
+                        <Label Text="no" FontSize="Medium" TextColor="Black"></Label>
+                    </Grid>
+                </Grid>
+                
+            </StackLayout>
+            <Button Text="Submit" Margin="130,30,130,30" Clicked="SumbitClicked" Command="{Binding SubmitClicked_Command}" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+<!--<Picker x:Name="UtilityPicker" Title="Select a utility">
+    <Picker.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+            <x:String>All</x:String>
+            <x:String>Time Check</x:String>
+            <x:String>Traffic Update</x:String>
+            <x:String>PPF</x:String>
+        </x:Array>
+    </Picker.ItemsSource>
+</Picker>-->

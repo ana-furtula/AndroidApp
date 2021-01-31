@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidMobileApp.Views.MasterDetailLPage"
+             MasterBehavior="Popover">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" Icon="menuicon.png">
+            <ContentPage.Content>
+                <Grid>
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Image Source="health3.jpg" Aspect="AspectFill"></Image>
+                    </Grid>
+                    <Grid>
+                        <StackLayout Margin="10,10,10,10">
+                            <Label Text="" FontSize="Medium"></Label>
+                            <Button Text="About" BackgroundColor="#00BFFF" Clicked="Button_Clicked1"></Button>
+                            <Button Text="Tests" BackgroundColor="#00BFFF" Clicked="Button_Clicked2"></Button>
+                            <Button Text="Results" BackgroundColor="#00BFFF" Clicked="Button_Clicked3"></Button>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+               
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    <MasterDetailPage.Detail>
+        <ContentPage Padding="10">
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Label Text="Detail Page"></Label>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidMobileApp.Views.ItemsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:AndroidMobileApp.ViewModels"  
+             xmlns:model="clr-namespace:AndroidMobileApp.Models"  
+             x:Name="BrowseItemsPage">
+
+    <Grid Padding="20, 20, 20, 20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Padding="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Label Text="Self-examination test" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue" />
+            <ImageButton Source="clipboard.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding SETestClicked_Command}"></ImageButton>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" Padding="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Label Text="Quick test" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue"/>
+            <ImageButton Source="covidtest.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding QuickTestClicked_Command}"></ImageButton>
+            </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Padding="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Label Text="PCR test" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue"/>
+            <ImageButton Source="bloodtest.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding PCRTestClicked_Command}"></ImageButton>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Padding="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Label Text="Data" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue"/>
+            <ImageButton Source="statistics.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding DataClicked_Command}"></ImageButton>
+        </Grid>
+        </Grid>
+        <!--<Button Text="Self-examination test" BackgroundColor="#1E90FF" HeightRequest="70"></Button>
+        <Button Text="Quick test" BackgroundColor="#00BFFF" HeightRequest="70"></Button>
+        <Button Text="PCR test" BackgroundColor="#87CEFA" HeightRequest="70"></Button>
+        <Button Text="Data" BackgroundColor="#87CEEB" HeightRequest="70"></Button>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems> 
+    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" x:DataType="model:Item">
+                        <Label Text="{Binding Text}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                        <Label Text="{Binding Description}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView> -->
+</ContentPage>
