@@ -3,8 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AndroidMobileApp.Views.RegisterPage">
     <ContentPage.Content>
-        <ScrollView>
-        <StackLayout Padding="30, 30, 30, 30">
+        <Grid>
+            <Grid IsVisible="{Binding IsActivityIndicatorInactive}">
+                <StackLayout Padding="30,50,30,0">
+                    <Image Source="logo1.png" VerticalOptions="Center" Margin="0,0,0,30"/>
+                    <Label Text="{Binding Error}" TextColor="Red"></Label>
+                    <Entry Text="{Binding Name}" FontSize="Medium" Placeholder="First name" />
+                    <Entry Text="{Binding LastName}" FontSize="Medium" Placeholder="Last name" />
+                    <Entry Text="{Binding Mail}" FontSize="Medium" Placeholder="e-mail" />
+                    <Entry Text="{Binding Username}" FontSize="Medium" Placeholder="Username" />
+                    <Entry Text="{Binding Password}" IsPassword="True" FontSize="Medium" Placeholder="Password"/>
+                    <StackLayout Orientation="Horizontal" Padding="0,20,0,20">
+                        <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                        <Button Text="Register" Command="{Binding RegisterCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <ActivityIndicator BackgroundColor="#A9A9A9" Color="#1E90FF" IsRunning="{Binding IsActivityIndicatorActive}" IsVisible="{Binding IsActivityIndicatorActive}"/>
+        </Grid>
+        <!--<StackLayout Padding="30, 30, 30, 30">
             <Image Source="logo1.png" VerticalOptions="Center" Margin="0,0,0,30"/>
             <Label Text="{Binding Error}" TextColor="Red"></Label>
             <Entry Text="{Binding Name}" FontSize="Medium" Placeholder="First name" />
@@ -16,7 +33,6 @@
                 <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Register" Command="{Binding RegisterCommand}" HorizontalOptions="FillAndExpand"></Button>
             </StackLayout>
-        </StackLayout>
-        </ScrollView>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

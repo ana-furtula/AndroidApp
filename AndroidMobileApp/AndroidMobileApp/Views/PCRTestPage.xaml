@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidMobileApp.Views.PCRTestPage"
+             BackgroundImageSource="pcrbg.png">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="15,15,15,15">
+            <Picker x:Name="UtilityPicker" Title="Select a utility" SelectedItem="{Binding SelectedTitle}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}" >
+                        <x:String>About PCR tests</x:String>
+                        <x:String>Methods of PCR testing</x:String>
+                        <x:String>Need for PCR test</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+                <Button Text="Continue" BorderRadius="30" Command="{Binding ContinueCommand}" WidthRequest="100"  HorizontalOptions="Center"></Button>
+            <Label Text="{Binding FirstLabel}" TextColor="Black" Padding="7,7,7,7" FontSize="20"></Label>
+            <Label Text="{Binding SecondLabel}" TextColor="Black" Padding="7,7,7,7" FontSize="20"></Label>
+                <Image Source="{Binding FirstPicture}" HorizontalOptions="Center" WidthRequest="120"></Image>
+            <Label Text="{Binding ThirdLabel}" TextColor="Black" Padding="7,7,7,7" FontSize="20"></Label>
+            <Image Source="{Binding SecondPicture}" HorizontalOptions="Center" WidthRequest="120"></Image>
+                <Label TextColor="Blue" FontSize="20" Text="{Binding SEClick}" Padding="5,20,5,20">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SEClickCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label TextColor="Blue" FontSize="20" Text="{Binding QuickClick}" Padding="5,0,5,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding QuickClickCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

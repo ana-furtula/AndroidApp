@@ -17,6 +17,7 @@
                             <Button Text="About" BackgroundColor="#00BFFF" Clicked="Button_Clicked1"></Button>
                             <Button Text="Tests" BackgroundColor="#00BFFF" Clicked="Button_Clicked2"></Button>
                             <Button Text="Results" BackgroundColor="#00BFFF" Clicked="Button_Clicked3"></Button>
+                            <Button Text="Scheduled testing" BackgroundColor="#00BFFF" Clicked="Button_Clicked4"></Button>
                         </StackLayout>
                     </Grid>
                 </Grid>

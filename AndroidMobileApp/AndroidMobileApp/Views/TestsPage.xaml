@@ -3,27 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AndroidMobileApp.Views.TestsPage">
     <ContentPage.Content>
-        <ScrollView>
-            <Grid>
+        
+            <Grid Padding="15,15,15,15">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Grid Grid.Row="0" Padding="10,10,10,10">
+            <Grid Grid.Row="0" >
+                <ScrollView>
                     <CollectionView x:Name="SETestView" ItemsSource="{Binding SelfExaminationTests}">
 
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <StackLayout Orientation="Vertical" Padding="10,10,10,10">
-                                    <Label Text="{Binding Name}" Padding="5,5,5,5" BackgroundColor="#1E90FF" FontAttributes="Bold" TextColor="White"></Label>
-                                    <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Name}" Padding="5,5,5,5" BackgroundColor="#CD5C5C" FontAttributes="Bold" TextColor="White"></Label>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="Bisque">
                                         <Label Text="Result:"></Label>
-                                        <Label Text="{Binding Result}" FontAttributes="Bold" />
+                                        <Label Text="{Binding Result}"   TextColor="Black"/>
                                     </StackLayout>
 
-                                    <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="Beige">
                                         <Label Text="Issue date:"></Label>
                                         <Label Text="{Binding IssueDate}" />
                                     </StackLayout>
@@ -32,33 +32,36 @@
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
+                </ScrollView>
+            </Grid>
+            <Grid Grid.Row="1" Padding="0,30,0,20">
+                <ScrollView>
+                    <CollectionView x:Name="QuickTestView" ItemsSource="{Binding QuickTests}">
+
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Vertical" Padding="10,10,10,10">
+                                    <Label Text="{Binding Name}" Padding="5,5,5,5" BackgroundColor="#008B8B" FontAttributes="Bold" TextColor="White"></Label>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="#C0C0C0">
+                                        <Label Text="Result:"></Label>
+                                        <Label Text="{Binding Result}" TextColor="Black"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="	#DCDCDC">
+                                        <Label Text="Issue date:"></Label>
+                                        <Label Text="{Binding IssueDate}" />
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    </ScrollView>
                 </Grid>
 
             </Grid>
-        <!--<CollectionView x:Name="SETestView" ItemsSource="{Binding SelfExaminationTests}">
-                
-                <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Orientation="Vertical" Padding="10,10,10,10">
-                            <Label Text="{Binding Name}" Padding="5,5,5,5" BackgroundColor="#1E90FF" FontAttributes="Bold" TextColor="White"></Label>
-                            <StackLayout Orientation="Horizontal">
-                            <Label Text="Result:"></Label>
-                            <Label Text="{Binding Result}" FontAttributes="Bold" />
-                        </StackLayout>
-
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="Issue date:"></Label>
-                            <Label Text="{Binding IssueDate}" />
-                        </StackLayout>
-
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>-->
-            
-            
-            
-        </ScrollView>
+        
     </ContentPage.Content>
 
 </ContentPage>

@@ -24,7 +24,26 @@ namespace AndroidMobileApp.ViewModels
                     IssueDate = test.IssueDate
                 });
             }
+
+            QuickTests = new ObservableCollection<QuickTest>();
+            List<QuickTest> qtests = LoginManager.Instance.LoggedUser.QuickTests;
+            QuickTests.Add(new QuickTest()
+            {
+                Name = "Quick test"
+            });
+            foreach (QuickTest test in qtests)
+            {
+                if (test.IssueDate != null)
+                {
+                    QuickTests.Add(new QuickTest()
+                    {
+                        Result = test.Result,
+                        IssueDate = test.IssueDate
+                    });
+                }
+            }
         }
         public ObservableCollection<SelfExaminationTest> SelfExaminationTests { get; set; }
+        public ObservableCollection<QuickTest> QuickTests { get; set; }
     }
 }

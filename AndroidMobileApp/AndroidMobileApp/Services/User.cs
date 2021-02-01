@@ -14,5 +14,7 @@ namespace AndroidMobileApp.Services
         public string Username { get; set; }
         public string Password { get; set; }
         public List<SelfExaminationTest> SelfExaminationTests { get; set; } = new List<SelfExaminationTest>();
+        public List<QuickTest> QuickTests{ get; set; } = new List<QuickTest>();
     }
 }
+

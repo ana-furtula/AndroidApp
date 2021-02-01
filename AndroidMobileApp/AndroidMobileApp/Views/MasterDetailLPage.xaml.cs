@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AndroidMobileApp.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,6 +51,12 @@ namespace AndroidMobileApp.Views
         private void Button_Clicked3(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new TestsPage());
+            UserRepository.Instance.CheckQuickTests(LoginManager.Instance.LoggedUser);
+            IsPresented = false;
+        }
+        private void Button_Clicked4(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new ScheduledTestingPage());
             IsPresented = false;
         }
     }

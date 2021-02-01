@@ -3,6 +3,7 @@ using AndroidMobileApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace AndroidMobileApp.ViewModels
@@ -17,7 +18,24 @@ namespace AndroidMobileApp.ViewModels
         public string LastName { get; set; }
         public string Mail { get; set; }
         public string Error { get; set; }
-
+        private bool _isActivityIndicatorActive { get; set; }
+        public bool IsActivityIndicatorActive
+        {
+            get
+            {
+                return _isActivityIndicatorActive;
+            }
+            set
+            {
+                if (_isActivityIndicatorActive != value)
+                {
+                    _isActivityIndicatorActive = value;
+                    OnPropertyChanged(nameof(IsActivityIndicatorActive));
+                    OnPropertyChanged(nameof(IsActivityIndicatorInactive));
+                }
+            }
+        }
+        public bool IsActivityIndicatorInactive => !IsActivityIndicatorActive;
         public RegisterViewModel()
         {
             CancelCommand = new Command(OnCancelClicked);
@@ -31,7 +49,9 @@ namespace AndroidMobileApp.ViewModels
 
         private async void OnRegisterClicked(object obj)
         {
-            if(Username!=null && Password!=null && LastName!=null && Name!=null && Mail != null)
+            IsActivityIndicatorActive = true;
+            await Task.Delay(3000);
+            if (Username!=null && Password!=null && LastName!=null && Name!=null && Mail != null)
             {
                 User user = new User();
                 user.Username = Username;
@@ -47,6 +67,7 @@ namespace AndroidMobileApp.ViewModels
                 Error = "Try again!";
                 OnPropertyChanged(nameof(Error));
             }
+            IsActivityIndicatorActive = false;
         }
 
     }

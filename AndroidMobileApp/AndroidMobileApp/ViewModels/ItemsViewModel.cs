@@ -28,7 +28,7 @@ namespace AndroidMobileApp.ViewModels
         }
         private void PCRTestClicked(object obj)
         {
-            MasterDetailLPage.Instance.SetDetailPage(new AboutPage());
+            MasterDetailLPage.Instance.SetDetailPage(new PCRTestPage());
         }
         private void DataClicked(object obj)
         {

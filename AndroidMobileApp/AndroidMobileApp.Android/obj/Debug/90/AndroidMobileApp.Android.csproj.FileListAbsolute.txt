@@ -511,3 +511,9 @@ C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\logo.png
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\logo1.png
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\quicktestbg.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\setestbg.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\proba.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\pcrbg.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\nose.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\mouth.png

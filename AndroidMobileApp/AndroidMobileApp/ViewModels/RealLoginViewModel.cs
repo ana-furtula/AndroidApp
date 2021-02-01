@@ -3,6 +3,7 @@ using AndroidMobileApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace AndroidMobileApp.ViewModels
@@ -15,6 +16,24 @@ namespace AndroidMobileApp.ViewModels
         public string Username { get; set; }
         public string Password { get; set; }
         public string Error { get; set; }
+        private bool _isActivityIndicatorActive { get; set; }
+        public bool IsActivityIndicatorActive
+        {
+            get
+            {
+                return _isActivityIndicatorActive;
+            }
+            set
+            {
+                if (_isActivityIndicatorActive != value)
+                {
+                    _isActivityIndicatorActive = value;
+                    OnPropertyChanged(nameof(IsActivityIndicatorActive));
+                    OnPropertyChanged(nameof(IsActivityIndicatorInactive));
+                }
+            }
+        }
+        public bool IsActivityIndicatorInactive => !IsActivityIndicatorActive;
         public RealLoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
@@ -23,7 +42,9 @@ namespace AndroidMobileApp.ViewModels
 
         private async void OnLoginClicked(object obj)
         {
-            if(Username!=null && Password != null)
+            IsActivityIndicatorActive = true;
+            await Task.Delay(3000);
+            if (Username!=null && Password != null)
             {
                 LoginData loginData = new LoginData();
                 loginData.Username = Username;
@@ -46,7 +67,7 @@ namespace AndroidMobileApp.ViewModels
                 Error = "Wrong username or password!";
                 OnPropertyChanged(nameof(Error));
             }
-           
+            IsActivityIndicatorActive = false;
         }
 
         private async void OnCancelClicked(object obj)

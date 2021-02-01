@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AndroidMobileApp.Views.SelfExaminationTestPage"
-             BackgroundColor="#DCDCDC"
+             BackgroundImageSource="setestbg.png"
              Title="Self-examination test">
     <ContentPage.Content>
         <StackLayout Padding="15,5,15,5">
@@ -138,22 +138,9 @@
                         <Label Text="no" FontSize="Medium" TextColor="Black"></Label>
                     </Grid>
                 </Grid>
-                
+
             </StackLayout>
-            <Button Text="Submit" Margin="130,30,130,30" Clicked="SumbitClicked" Command="{Binding SubmitClicked_Command}" ></Button>
+            <Button Text="Submit" BorderRadius="30" Margin="130,30,130,30" Clicked="SumbitClicked" Command="{Binding SubmitClicked_Command}" ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
-
-
-
-<!--<Picker x:Name="UtilityPicker" Title="Select a utility">
-    <Picker.ItemsSource>
-        <x:Array Type="{x:Type x:String}">
-            <x:String>All</x:String>
-            <x:String>Time Check</x:String>
-            <x:String>Traffic Update</x:String>
-            <x:String>PPF</x:String>
-        </x:Array>
-    </Picker.ItemsSource>
-</Picker>-->

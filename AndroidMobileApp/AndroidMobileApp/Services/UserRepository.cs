@@ -33,6 +33,7 @@ namespace AndroidMobileApp.Services
         private static UserRepository _instance;
         private object _lock = new object();
         private List<User> _users = new List<User>();
+        private static Random _random = new Random(10000);
         private UserRepository()
         {
         }
@@ -91,11 +92,52 @@ namespace AndroidMobileApp.Services
 
                 _users = usersFromFile == null ? new List<User>() : usersFromFile;
 
+                foreach(User user in _users)
+                {
+                    foreach(QuickTest quick in user.QuickTests)
+                    {
+                        TimeSpan sad = DateTime.Now.TimeOfDay;
+                        if (quick.Result == QuickTestResult.Unknown && quick.CheckedDate<=DateTime.Now && quick.CheckedTime<sad)
+                        {
+                            quick.Result = (QuickTestResult)_random.Next(1, 3);
+                            quick.IssueDate = DateTime.Now;
+                        }
+                    }
+                }
+
             }
         }
         public User GetUserByCredentials(LoginData loginData)
         {
             return _users.FirstOrDefault(x => x.Username == loginData.Username && x.Password == loginData.Password);
+        }
+
+        public bool IsTerminAvailable(DateTime date, TimeSpan time) 
+        {
+            foreach(User user in _users)
+            {
+                foreach(QuickTest test in user.QuickTests)
+                {
+                    if(test.IssueDate==null && test.CheckedDate.Equals(date) && test.CheckedTime.Equals(time))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        public void CheckQuickTests(User user)
+        {
+            TimeSpan sad = DateTime.Now.TimeOfDay;
+            foreach (QuickTest quick in user.QuickTests)
+            {
+                if (quick.Result == QuickTestResult.Unknown && quick.CheckedDate <= DateTime.Now && quick.CheckedTime < sad)
+                {
+                    quick.Result = (QuickTestResult)_random.Next(1, 3);
+                    quick.IssueDate = DateTime.Now;
+                }
+            }
         }
     }
 
