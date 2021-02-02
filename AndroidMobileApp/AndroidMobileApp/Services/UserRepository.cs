@@ -97,7 +97,7 @@ namespace AndroidMobileApp.Services
                     foreach(QuickTest quick in user.QuickTests)
                     {
                         TimeSpan sad = DateTime.Now.TimeOfDay;
-                        if (quick.Result == QuickTestResult.Unknown && quick.CheckedDate<=DateTime.Now && quick.CheckedTime<sad)
+                        if (quick.Result == QuickTestResult.Unknown && (quick.CheckedDate<DateTime.Now || (quick.CheckedDate <= DateTime.Now && quick.CheckedTime<=sad)))
                         {
                             quick.Result = (QuickTestResult)_random.Next(1, 3);
                             quick.IssueDate = DateTime.Now;

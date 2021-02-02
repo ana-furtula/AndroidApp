@@ -22,3 +22,4 @@ C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\n
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\netstandard2.0\Views\QuickTestPage.xaml.g.cs
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\netstandard2.0\Views\ScheduledTestingPage.xaml.g.cs
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\netstandard2.0\Views\PCRTestPage.xaml.g.cs
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs

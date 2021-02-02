@@ -14,10 +14,11 @@
                     <Grid>
                         <StackLayout Margin="10,10,10,10">
                             <Label Text="" FontSize="Medium"></Label>
-                            <Button Text="About" BackgroundColor="#00BFFF" Clicked="Button_Clicked1"></Button>
-                            <Button Text="Tests" BackgroundColor="#00BFFF" Clicked="Button_Clicked2"></Button>
-                            <Button Text="Results" BackgroundColor="#00BFFF" Clicked="Button_Clicked3"></Button>
-                            <Button Text="Scheduled testing" BackgroundColor="#00BFFF" Clicked="Button_Clicked4"></Button>
+                            <Button Text="Home" BackgroundColor="#00BFFF" Clicked="Tests_Clicked"></Button>
+                            <Button Text="Results" BackgroundColor="#00BFFF" Clicked="Results_Clicked"></Button>
+                            <Button Text="Scheduled testing" BackgroundColor="#00BFFF" Clicked="Scheduled_Clicked"></Button>
+                            <Button Text="About" BackgroundColor="#00BFFF" Clicked="About_Clicked"></Button>
+                            <Button Text="Log out" BackgroundColor="#1E90FF" Clicked="LogOut_Clicked"></Button>
                         </StackLayout>
                     </Grid>
                 </Grid>

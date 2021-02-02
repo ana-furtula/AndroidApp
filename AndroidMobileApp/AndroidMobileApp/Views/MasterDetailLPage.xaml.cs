@@ -38,26 +38,34 @@ namespace AndroidMobileApp.Views
             IsPresented = false;
         }
 
-        private void Button_Clicked1(object sender, EventArgs e)
+        private void About_Clicked(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new AboutPage());
             IsPresented = false;
         }
-        private void Button_Clicked2(object sender, EventArgs e)
+        private void Tests_Clicked(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new ItemsPage());
             IsPresented = false;
         }
-        private void Button_Clicked3(object sender, EventArgs e)
+        private void Results_Clicked(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new TestsPage());
             UserRepository.Instance.CheckQuickTests(LoginManager.Instance.LoggedUser);
             IsPresented = false;
         }
-        private void Button_Clicked4(object sender, EventArgs e)
+        private void Scheduled_Clicked(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new ScheduledTestingPage());
             IsPresented = false;
+        }
+
+        private async void LogOut_Clicked(object sender, EventArgs e)
+        {
+            UserRepository.Instance.Save();
+            _instance = new MasterDetailLPage();
+            LoginManager.Instance.LoggedUser = null;
+            await Application.Current.MainPage.Navigation.PushModalAsync(new LoginPage());
         }
     }
 }

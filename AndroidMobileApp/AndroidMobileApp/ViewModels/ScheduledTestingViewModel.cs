@@ -13,16 +13,13 @@ namespace AndroidMobileApp.ViewModels
         {
             QuicksScheduled = new ObservableCollection<QuickTest>();
             List<QuickTest> qtests = LoginManager.Instance.LoggedUser.QuickTests;
-            QuicksScheduled.Add(new QuickTest()
-            {
-                Name = "Quick test"
-            });
             foreach (QuickTest test in qtests)
             {
                 if (test.IssueDate == null)
                 {
                     QuicksScheduled.Add(new QuickTest()
                     {
+                        Name = "Quick test",
                         CheckedDate = test.CheckedDate.Date,
                         CheckedTime = test.CheckedTime
                     }); 

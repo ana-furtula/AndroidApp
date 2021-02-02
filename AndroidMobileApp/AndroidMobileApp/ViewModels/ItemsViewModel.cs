@@ -8,13 +8,13 @@ namespace AndroidMobileApp.ViewModels
         public Command QuickTestClicked_Command { get; }
         public Command SETestClicked_Command { get; }
         public Command PCRTestClicked_Command { get; }
-        public Command DataClicked_Command { get; }
+        public Command ProfileClicked_Command { get; }
         public ItemsViewModel()
         {
             QuickTestClicked_Command = new Command(QuickTestClicked);
             SETestClicked_Command = new Command(SETestClicked);
             PCRTestClicked_Command = new Command(PCRTestClicked);
-            DataClicked_Command = new Command(DataClicked);
+            ProfileClicked_Command = new Command(ProfileClicked);
          
         }
 
@@ -30,9 +30,9 @@ namespace AndroidMobileApp.ViewModels
         {
             MasterDetailLPage.Instance.SetDetailPage(new PCRTestPage());
         }
-        private void DataClicked(object obj)
+        private void ProfileClicked(object obj)
         {
-            MasterDetailLPage.Instance.SetDetailPage(new AboutPage());
+            MasterDetailLPage.Instance.SetDetailPage(new ProfilePage());
         }
     }
 }

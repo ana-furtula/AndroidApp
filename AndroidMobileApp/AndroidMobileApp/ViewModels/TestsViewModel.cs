@@ -12,14 +12,11 @@ namespace AndroidMobileApp.ViewModels
         {
             SelfExaminationTests = new ObservableCollection<SelfExaminationTest>();
             List<SelfExaminationTest> tests = LoginManager.Instance.LoggedUser.SelfExaminationTests;
-            SelfExaminationTests.Add(new SelfExaminationTest()
-            {
-                Name = "Self-examination test"
-            });
             foreach (SelfExaminationTest test in tests)
             {
                 SelfExaminationTests.Add(new SelfExaminationTest()
                 {
+                    Name = "Self-examination test",
                     Result = test.Result,
                     IssueDate = test.IssueDate
                 });
@@ -27,16 +24,14 @@ namespace AndroidMobileApp.ViewModels
 
             QuickTests = new ObservableCollection<QuickTest>();
             List<QuickTest> qtests = LoginManager.Instance.LoggedUser.QuickTests;
-            QuickTests.Add(new QuickTest()
-            {
-                Name = "Quick test"
-            });
+
             foreach (QuickTest test in qtests)
             {
                 if (test.IssueDate != null)
                 {
                     QuickTests.Add(new QuickTest()
                     {
+                        Name = "Quick test",
                         Result = test.Result,
                         IssueDate = test.IssueDate
                     });

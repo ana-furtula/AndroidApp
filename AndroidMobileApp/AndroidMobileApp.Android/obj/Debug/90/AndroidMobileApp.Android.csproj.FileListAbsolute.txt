@@ -517,3 +517,11 @@ C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\pcrbg.png
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\nose.png
 C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\mouth.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\user.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\profilebg.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\user1.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\profilebg1.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\user2.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\aaa.jpg
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\aaa1.png
+C:\Users\ANA\Code\AndroidMobileApp\AndroidMobileApp\AndroidMobileApp.Android\obj\Debug\90\res\drawable\arrow.png

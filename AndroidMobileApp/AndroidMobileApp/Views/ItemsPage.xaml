@@ -16,37 +16,37 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0" Grid.Column="0" Padding="10,10,10,10">
+        <Grid Grid.Row="0" Grid.Column="0" Padding="20,20,20,20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-            <Label Text="Self-examination test" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue" />
-            <ImageButton Source="clipboard.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding SETestClicked_Command}"></ImageButton>
+            <Label Text="Profile" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue"/>
+            <ImageButton Source="user.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding ProfileClicked_Command}"></ImageButton>
             </Grid>
-            <Grid Grid.Row="0" Grid.Column="1" Padding="10,10,10,10">
+        <Grid Grid.Row="0" Grid.Column="1" Padding="20,20,20,20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*"/>
                 <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
+            <Label Text="Self-examination test" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue" />
+            <ImageButton Source="clipboard.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding SETestClicked_Command}"></ImageButton>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Padding="20,20,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
             <Label Text="Quick test" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue"/>
             <ImageButton Source="covidtest.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding QuickTestClicked_Command}"></ImageButton>
-            </Grid>
-        <Grid Grid.Row="1" Grid.Column="0" Padding="10,10,10,10">
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Padding="20,20,20,20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             <Label Text="PCR test" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue"/>
             <ImageButton Source="bloodtest.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding PCRTestClicked_Command}"></ImageButton>
-        </Grid>
-        <Grid Grid.Row="1" Grid.Column="1" Padding="10,10,10,10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            <Label Text="Data" Grid.Row="1" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Blue"/>
-            <ImageButton Source="statistics.png" Aspect="AspectFit" BackgroundColor="Transparent" IsEnabled="True" Command="{Binding DataClicked_Command}"></ImageButton>
         </Grid>
         </Grid>
         <!--<Button Text="Self-examination test" BackgroundColor="#1E90FF" HeightRequest="70"></Button>
