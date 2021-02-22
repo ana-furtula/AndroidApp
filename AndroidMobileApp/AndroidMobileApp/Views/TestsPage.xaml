@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AndroidMobileApp.Views.TestsPage">
+             x:Class="AndroidMobileApp.Views.TestsPage"
+             Title="{Binding Title}">
     <ContentPage.Content>
         
             <Grid Padding="15,15,15,15">
@@ -10,7 +11,9 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" >
+            <Grid Grid.Row="0" Padding="0,20,0,0">
+                <Image Source="{Binding NoSEDataImg}"></Image>
+                <Label Text="{Binding NoSETests}" TextColor="RoyalBlue" FontSize="15" FontAttributes="Bold"></Label>
                 <ScrollView>
                     <CollectionView x:Name="SETestView" ItemsSource="{Binding SelfExaminationTests}">
 
@@ -35,9 +38,10 @@
                 </ScrollView>
             </Grid>
             <Grid Grid.Row="1" Padding="0,30,0,20">
+                <Image Source="{Binding NoQDataImg}"></Image>
+                <Label Text="{Binding NoQTests}" TextColor="RoyalBlue" FontSize="15" FontAttributes="Bold" ></Label>
                 <ScrollView>
                     <CollectionView x:Name="QuickTestView" ItemsSource="{Binding QuickTests}">
-
 
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
@@ -52,13 +56,13 @@
                                         <Label Text="Issue date:"></Label>
                                         <Label Text="{Binding IssueDate}" />
                                     </StackLayout>
-
+                                   
                                 </StackLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                    </ScrollView>
-                </Grid>
+                </ScrollView>
+            </Grid>
 
             </Grid>
         

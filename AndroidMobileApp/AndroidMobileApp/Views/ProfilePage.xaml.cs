@@ -19,7 +19,10 @@ namespace AndroidMobileApp.Views
             InitializeComponent();
             this.BindingContext = new ProfileViewModel();
         }
-
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
         private async void ChangePassword_Clicked(object sender, EventArgs e)
         {
             string oldPassword = await DisplayPromptAsync("Password Changing", "Enter your password", maxLength: 20, keyboard: Keyboard.Default);

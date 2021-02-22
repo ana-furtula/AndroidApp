@@ -1,45 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AndroidMobileApp.Views.ProfilePage">
+             x:Class="AndroidMobileApp.Views.ProfilePage"
+             Title="{Binding Title}"
+             BackgroundColor="#A9A9A9"
+             >
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" Padding="15,20,15,10">
                 <Image Source="health.jpg" Aspect="AspectFill"></Image>
                 <StackLayout Padding="50,50,50,50">
-                    <Image Source="user2.png" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="75"></Image>
-                    <Label Text="{Binding FullName}" HorizontalOptions="Center" FontSize="24" TextColor="Black"></Label>
+                    <Image Source="user2.png" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="55" Margin="0,0,0,10"></Image>
+                    <Label Text="{Binding FullName}" HorizontalOptions="Center" FontSize="22" TextColor="Black"></Label>
                 </StackLayout>
             </Grid>
-            <Grid Grid.Row="1" Padding="20,20,20,20">
+            <Grid Grid.Row="1" Padding="25,20,25,20">
                 <StackLayout>
                     <StackLayout Orientation="Horizontal" Padding="0,10,0,5">
                         <Image Source="arrow.png" WidthRequest="22"></Image>
-                        <Label Text="First name:" Padding="0,5,10,5" FontSize="21" TextColor="Black"></Label>
+                        <Label Text="First name:" Padding="5,5,10,5" FontSize="21" TextColor="Black"></Label>
                         <Label Text="{Binding FirstName}" Padding="0,5,5,5"  FontSize="21" TextColor="Black"></Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Padding="0,5,0,5">
                         <Image Source="arrow.png" WidthRequest="22"></Image>
-                        <Label Text="Last name:" Padding="0,5,10,5" FontSize="21" TextColor="Black"></Label>
+                        <Label Text="Last name:" Padding="5,5,10,5" FontSize="21" TextColor="Black"></Label>
                         <Label Text="{Binding LastName}" Padding="0,5,5,5"  FontSize="21" TextColor="Black"></Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Padding="0,5,0,5">
                         <Image Source="arrow.png" WidthRequest="22"></Image>
-                        <Label Text="Username:" Padding="0,5,10,5" FontSize="21" TextColor="Black"></Label>
+                        <Label Text="Username:" Padding="5,5,10,5" FontSize="21" TextColor="Black"></Label>
                         <Label Text="{Binding Username}" Padding="0,5,5,5"  FontSize="21" TextColor="Black"></Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Padding="0,5,0,5">
                         <Image Source="arrow.png" WidthRequest="22"></Image>
-                        <Label Text="E-mail:" Padding="0,5,10,5" FontSize="21" TextColor="Black"></Label>
+                        <Label Text="E-mail:" Padding="5,5,10,5" FontSize="21" TextColor="Black"></Label>
                         <Label Text="{Binding Mail}" Padding="0,5,5,5" FontSize="21" TextColor="Black"></Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Padding="0,5,0,5">
                         <Image Source="arrow.png" WidthRequest="22"></Image>
-                        <Button Text="Change password" BackgroundColor="White" TextColor="Blue" FontSize="18" Clicked="ChangePassword_Clicked"></Button>
+                        <Button Text="Change password" BackgroundColor="Transparent" TextColor="	#000080" FontSize="18" Clicked="ChangePassword_Clicked"></Button>
                     </StackLayout>
                 </StackLayout>
             </Grid>

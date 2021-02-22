@@ -37,7 +37,7 @@
 
 	/* 1: AndroidMobileApp.dll */
 	/* uncompressed_file_size */
-	.long	105984
+	.long	107008
 	/* loaded */
 	.byte	0
 	/* data */
@@ -64,7 +64,7 @@
 
 	/* 4: Mono.Android.dll */
 	/* uncompressed_file_size */
-	.long	1997824
+	.long	1992704
 	/* loaded */
 	.byte	0
 	/* data */
@@ -325,7 +325,7 @@
 
 	/* 33: Xamarin.Android.Support.CustomTabs.dll */
 	/* uncompressed_file_size */
-	.long	26112
+	.long	9728
 	/* loaded */
 	.byte	0
 	/* data */
@@ -505,7 +505,7 @@
 
 	/* 53: Xamarin.Essentials.dll */
 	/* uncompressed_file_size */
-	.long	28672
+	.long	25088
 	/* loaded */
 	.byte	0
 	/* data */

@@ -18,5 +18,9 @@ namespace AndroidMobileApp.Views
             InitializeComponent();
             this.BindingContext = new RealLoginViewModel();
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

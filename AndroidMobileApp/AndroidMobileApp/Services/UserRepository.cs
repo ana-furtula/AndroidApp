@@ -71,7 +71,7 @@ namespace AndroidMobileApp.Services
 
         public void Save()
         {
-            lock (_lock)
+            lock (_lock) 
             {
                 var filePath = $"{Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "fajl.json")}";
 
@@ -92,12 +92,11 @@ namespace AndroidMobileApp.Services
 
                 _users = usersFromFile == null ? new List<User>() : usersFromFile;
 
-                foreach(User user in _users)
+                foreach (User user in _users)
                 {
-                    foreach(QuickTest quick in user.QuickTests)
+                    foreach (QuickTest quick in user.QuickTests)
                     {
-                        TimeSpan sad = DateTime.Now.TimeOfDay;
-                        if (quick.Result == QuickTestResult.Unknown && (quick.CheckedDate<DateTime.Now || (quick.CheckedDate <= DateTime.Now && quick.CheckedTime<=sad)))
+                        if (quick.Result == QuickTestResult.Unknown && (quick.CheckedDate < DateTime.Now || (quick.CheckedDate <= DateTime.Now && quick.CheckedTime <= DateTime.Now.TimeOfDay)))
                         {
                             quick.Result = (QuickTestResult)_random.Next(1, 3);
                             quick.IssueDate = DateTime.Now;
@@ -112,8 +111,12 @@ namespace AndroidMobileApp.Services
             return _users.FirstOrDefault(x => x.Username == loginData.Username && x.Password == loginData.Password);
         }
 
-        public bool IsTerminAvailable(DateTime date, TimeSpan time) 
+        public bool IsTerminAvailable(DateTime date, TimeSpan time)
         {
+            if (date<=DateTime.Now && time<= DateTime.Now.TimeOfDay)
+            {
+                return false;
+            }
             foreach(User user in _users)
             {
                 foreach(QuickTest test in user.QuickTests)
@@ -129,10 +132,9 @@ namespace AndroidMobileApp.Services
 
         public void CheckQuickTests(User user)
         {
-            TimeSpan sad = DateTime.Now.TimeOfDay;
             foreach (QuickTest quick in user.QuickTests)
             {
-                if (quick.Result == QuickTestResult.Unknown && quick.CheckedDate <= DateTime.Now && quick.CheckedTime < sad)
+                if (quick.Result == QuickTestResult.Unknown && quick.CheckedDate <= DateTime.Now && quick.CheckedTime < DateTime.Now.TimeOfDay)
                 {
                     quick.Result = (QuickTestResult)_random.Next(1, 3);
                     quick.IssueDate = DateTime.Now;

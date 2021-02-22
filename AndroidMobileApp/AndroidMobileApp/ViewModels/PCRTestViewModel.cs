@@ -21,6 +21,7 @@ namespace AndroidMobileApp.ViewModels
         public Command QuickClickCommand { get; }
         public PCRTestViewModel()
         {
+            Title = "PCR tests";
             ContinueCommand = new Command(OnContinueClicked);
             SEClickCommand = new Command(OnSEOptionClicked);
             QuickClickCommand = new Command(OnQuickOptionClicked);
@@ -66,7 +67,7 @@ namespace AndroidMobileApp.ViewModels
             {
                 FirstLabel = "";
                 SecondLabel = "If your self-examination test or quick test is positive you should probably do PCR test.";
-                ThirdLabel = "Also, make sure to have negative PCR test if you are travelling outside your country.";
+                ThirdLabel = "Also, make sure you have negative PCR test if you are travelling outside your country.";
                 FirstPicture = "";
                 SecondPicture = "";
                 SEClick = "Click here to do self-examinination test";

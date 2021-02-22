@@ -18,7 +18,10 @@ namespace AndroidMobileApp.Views
             InitializeComponent();
             this.BindingContext = new SelfExaminationTestViewModel();
         }
-
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
         private void SumbitClicked(object sender, EventArgs e)
         {
             DisplayAlert("Notification", "Saved!", "OK");

@@ -18,6 +18,7 @@ namespace AndroidMobileApp.ViewModels
         public string Available { get; set; }
         public QuickTestViewModel()
         {
+            Title = "Quick test scheduling";
             MinDate = DateTime.Now.ToShortDateString();
             OnPropertyChanged(nameof(MinDate));
             MaxDate = (new DateTime(2021, 12, 31)).ToShortDateString();
@@ -35,7 +36,7 @@ namespace AndroidMobileApp.ViewModels
             {
                 Unavailable = " ";
                 OnPropertyChanged(nameof(Unavailable));
-                Available = "Done! Check Sheduled testing";
+                Available = "Done! Check Sheduled tests";
                 OnPropertyChanged(nameof(Available));
                 QuickTest test = new QuickTest();
                 test.CheckedDate = enteredDate;

@@ -32,6 +32,10 @@ namespace AndroidMobileApp.Views
                 return _instance;
             }
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
         public void SetDetailPage(Page page)
         {
             Detail = new NavigationPage(page);

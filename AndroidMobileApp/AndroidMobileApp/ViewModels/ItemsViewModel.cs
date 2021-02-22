@@ -11,6 +11,7 @@ namespace AndroidMobileApp.ViewModels
         public Command ProfileClicked_Command { get; }
         public ItemsViewModel()
         {
+            Title = "Home";
             QuickTestClicked_Command = new Command(QuickTestClicked);
             SETestClicked_Command = new Command(SETestClicked);
             PCRTestClicked_Command = new Command(PCRTestClicked);

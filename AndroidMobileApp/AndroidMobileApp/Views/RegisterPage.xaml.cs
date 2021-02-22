@@ -18,5 +18,9 @@ namespace AndroidMobileApp.Views
             InitializeComponent();
             this.BindingContext = new RegisterViewModel();
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

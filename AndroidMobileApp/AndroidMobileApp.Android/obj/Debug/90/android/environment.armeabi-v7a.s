@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.companyname.androidmobileapp"
-	.size	.L.env.str.1, 33
+	.asciz	"com.ajahealth.androidmobileapp"
+	.size	.L.env.str.1, 31
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"88fa7a94-9cbe-40c4-a0f0-9fa15aaf2bdd"
+	.asciz	"4b69b76c-0d6a-41b9-9afe-b3adb6fd3e3d"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

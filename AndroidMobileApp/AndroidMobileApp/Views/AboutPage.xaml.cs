@@ -12,5 +12,9 @@ namespace AndroidMobileApp.Views
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, true);
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

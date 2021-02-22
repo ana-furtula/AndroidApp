@@ -1,9 +1,7 @@
 ﻿using AndroidMobileApp.Services;
 using AndroidMobileApp.Views;
-using System;
 using System.IO;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace AndroidMobileApp
 {
@@ -19,18 +17,10 @@ namespace AndroidMobileApp
                 File.Create(filePath);
             UserRepository.Instance.Load();
         }
-
-        protected override void OnStart()
-        {
-        }
-
         protected override void OnSleep()
         {
             UserRepository.Instance.Save();
         }
 
-        protected override void OnResume()
-        {
-        }
     }
 }

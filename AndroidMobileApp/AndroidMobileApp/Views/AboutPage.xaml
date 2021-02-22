@@ -4,29 +4,34 @@
              x:Class="AndroidMobileApp.Views.AboutPage"
              xmlns:vm="clr-namespace:AndroidMobileApp.ViewModels"
              Title="{Binding Title}"
-             BackgroundColor="#DCDCDC">
+             BackgroundColor="#DCDCDC"
+             BackgroundImageSource="line.png">
+    <ContentPage.Content>
+        <Grid Padding="20,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackLayout>
+                    <Image Source="ana.png" WidthRequest="120" HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                    <Label Text="Aleksandra Furtula" TextColor="Black" HorizontalOptions="Center" FontSize="18"></Label>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackLayout>
+                    <Image Source="anastasija.png" WidthRequest="120" HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                    <Label Text="Anastasija Cvetkovic" TextColor="Black" HorizontalOptions="Center" FontSize="18"></Label>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackLayout>
+                    <Image Source="jelena.png" WidthRequest="120" HorizontalOptions="Center" VerticalOptions="Center"></Image>
+                    <Label Text="Jelena Filipovic" TextColor="Black" HorizontalOptions="Center" FontSize="18"></Label>
+                </StackLayout>
+            </Grid>
 
-    <ContentPage.BindingContext>
-        <vm:AboutViewModel />
-    </ContentPage.BindingContext>
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Accent">#DCDCDC</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-
-        </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="logo.png" VerticalOptions="Center"/>
-                </ContentView>
-            </StackLayout>
-        </StackLayout>
-    </Grid>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
